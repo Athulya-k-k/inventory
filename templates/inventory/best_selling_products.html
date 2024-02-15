@@ -1,0 +1,16 @@
+<!-- inventory/templates/inventory/best_selling_products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Best Selling Products</title>
+</head>
+<body>
+    <h1>Best Selling Products</h1>
+    <ul>
+        {% for product in best_selling_products %}
+            <li>{{ product.name }} - Total Quantity Sold: {{ product.total_quantity_sold }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

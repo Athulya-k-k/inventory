@@ -1,0 +1,16 @@
+<!-- inventory/templates/inventory/record_sale.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Record Sale</title>
+</head>
+<body>
+    <h1>Record Sale for {{ product.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Record Sale</button>
+    </form>
+</body>
+</html>

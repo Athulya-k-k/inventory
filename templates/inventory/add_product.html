@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
+    <style>
+        /* Centering the content */
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust as needed */
+        }
+
+        /* Styling the grey box */
+        .grey-box {
+            background-color: #ccc; /* Grey background color */
+            padding: 20px; /* Add padding for spacing */
+            border-radius: 10px; /* Add border radius for rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div class="center"> <!-- Centering container -->
+        <div class="grey-box"> <!-- Grey box -->
+            <h1>Add Product</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
